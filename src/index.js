@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import { unregister } from './registerServiceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 function Province(name, nickname, photo, background, description, capital, population, industry, nomineeProgram, programUrl, id) {
@@ -40,4 +40,4 @@ ReactDOM.render((
         <App provinces={ provinces } />
     </Router>),
     document.getElementById('root'));
-registerServiceWorker();
+    unregister();
