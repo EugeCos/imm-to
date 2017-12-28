@@ -1,0 +1,43 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+// import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+function Province(name, nickname, photo, background, description, capital, population, industry, nomineeProgram, programUrl, id) {
+    this.name = name;
+    this.nickname = nickname;
+    this.photo = photo;
+    this.background = background;
+    this.description = description;
+    this.capital = capital;
+    this.population = population;
+    this.industry = industry;
+    this.nomineeProgram = nomineeProgram;
+    this.programUrl = programUrl;
+    this.id = id;
+  }
+  
+  const provinces = [
+    new Province('British Columbia', "Beautiful British Columbia, The Hipster Province", "/images/bc.jpg", "/images/background/back_bc.jpg", "British Columbia is the western most Canadian province. Victoria is the capital city. The Rocky Mountains run down the border of Alberta and British Columbia and extend into the United States.", "Victoria (85,792 people)", "4,648,055", "oftware development, start-ups, sforestry, fishing and mining gold, silver and other minerals, tourism, film industry", "British Columbia Provincial Nominee Program (BCPNP)", "https://www.welcomebc.ca/immigrate-to-b-c/b-c-provincial-nominee-program", 0),
+    new Province('Alberta', "Wild Rose Country, Oilberta", "/images/alberta.jpg", "/images/background/back_alberta.jpg", "Alberta is the western most 'prairie province'. Edmonton is the capital city.  Alberta became a province of Canada in 1905. The Rocky Mountains run down the border of Alberta and British Columbia and extend into the United States.", "Edmonton (932,546 people)", "4,067,175", "natural resources extraction and processing, agriculture and forestry", "Alberta Immigrant Nominee Program (AINP)", "http://www.albertacanada.com/opportunity/programs-and-forms/ainp.aspx", 1),
+    new Province('Saskatchewan', "The Bread Basket of Canada, Land of the Living Skies", "/images/sask.jpg", "/images/background/back_sask.jpg", "Saskatchewan is the middle 'prairie province'. Regina is the capital city, which also happens to be where I was born. Saskatchewan became a province of Canada on September 1, 1905.", "Regina (215,106 people)", "1,098,352", "agriculture, tractor and agricultural machinery manufacturing, meat, beef and poultry processing", "Saskatchewan Immigrant Nominee Program (SINP)", "http://www.saskatchewan.ca/residents/moving-to-saskatchewan/immigrating-to-saskatchewan/saskatchewan-immigrant-nominee-program", 2),
+    new Province('Manitoba', "Land of 100,000 Lakes, Friendly Manitoba", "/images/manitoba.jpg", "/images/background/back_manitoba.jpg", "Manitoba is the eastern-most of the 'prairie provinces'. Winnipeg is the capital city. Manitoba became a province of Canada on July 15, 1870.", "Winnipeg (705,244 people)", "1,278,365", "agriculture, beef and poultry processing, tractor and agricultural machinery manufacturing, mining", "Manitoba Provincial Nominee Program (MPNP)", "http://www.immigratemanitoba.com/", 3),
+    new Province('Ontario', "The Heartland Province, The Mega Province of Canada", "/images/ontario.jpg", "/images/background/back_ontario.jpg", "Ontario is the second largest Canadian province (in terms of area) and can be found on the map between Manitoba and Quebec.  Toronto is the capital city of Ontario. Ottawa, the capital city of Canada, is also in Ontario. Ontario joined the Canadian Confederation in 1867.", "Toronto (2,731,571 people)", "13,448,494", "vehicle manufacturing, information and technology, plastic product manufacturing, tourism, film industry, arts", "Ontario Immigrant Nominee Program (OINP)", "http://www.ontarioimmigration.ca/en/pnp/", 4),
+    new Province('Quebec', "La Belle Province, Home of the Poutine", "/images/quebec.jpg", "/images/background/back_quebec1.jpg", "Quebec is the largest Canadian province (in terms of area) and can be found on the map east of Ontario.  Quebec City is the capital of Quebec.  The main language spoken in Quebec is French. Quebec joined the Canadian Confederation in 1867.", "Quebec City (531,902 people)", "8,164,361", "aerospace manufacturing, mining, logistics, tourism, design", "Immigration-Québec", "http://www.immigration-quebec.gouv.qc.ca/en/", 5),
+    new Province('New Brunswick', "The Picture Province, The Drive-Through Province", "/images/nb.jpg", "/images/background/back_nb.jpg", "New Brunswick is one of Canada's ten provinces.  It is an Atlantic or 'Maritime' province.  It can be found on the East Coast of the country, near the Atlantic Ocean. New Brunswick joined the Canadian Confederation in 1867.", "Fredericton (58,220 people)", "747,101", "fishing and seafood preparation, agriculture, forestry, mining", "New Brunswick Provincial Nominee Program (NBPNP)", "http://www.welcomenb.ca/content/wel-bien/en/immigrating/content/HowToImmigrate/NBProvincialNomineeProgram.html", 6),
+    new Province('Nova Scotia', "Canada's Ocean Playground, The Sea Bound Coast", "/images/ns.jpg", "/images/background/back_ns.jpg", "Nova Scotia is one of Canada's ten provinces.  It is an Atlantic or 'Maritime' province.  It can be found on the East Coast of the country, near the Atlantic Ocean. Nova Scotia joined the Canadian Confederation in 1867.", "Halifax (403,131 people)", "923,598", "fishing and seafood preparation, mining and drilling, tourism", "Nova Scotia Nominee Program (NSNP)", "http://novascotiaimmigration.com/move-here/", 7),
+    new Province('Prince Edward Island', "The Cradle of Confederation, Million Acre Farm", "/images/prince_edward.jpg", "/images/background/back_pei.jpg", "Prince Edward Island is the smallest of Canada's ten provinces.  It is an Atlantic or 'Maritime' province. It can be found on the East Coast of the country, near the Atlantic Ocean. The province joined Confederation on July 1, 1873.", "Charlottetown (34,562 people)", "142,907", "fishing and seafood preparation, agriculture, tourism", "PEI Provincial Nominee Program (PNP)", "https://www.princeedwardisland.ca/en/topic/immigrate", 8),
+    new Province('Newfoundland and Labrador', "The Rock, The Big Land", "/images/newfie.jpg", "/images/background/back_newfie.jpg", "Newfoundland is one of Canada's ten provinces.  It is an Atlantic or 'Maritime' province.  It can be found on the East Coast of the country, near the Atlantic Ocean. Newfoundland was Britain's first North American colony, claimed by John Cabot in 1497.  Sir Gilbert officially proclaimed Newfoundland a colony of England in 1583.", "St. John's (108,860 people)", "519,716", "fishing and seafood preparation, natural resources extraction and processing, tourism", "Newfoundland and Labrador Provincial Nominee Program", "http://www.nlpnp.ca/", 9),
+    new Province('Yukon', "The Land of the Midnight Sun, Land of the Polar Bear", "/images/yukon.jpg", "/images/background/back_yukon.jpg", "Yukon is the western-most Canadian territory. Whitehorse is the capital city. The Yukon Territory is bordered on the Western side by the U.S.  State of Alaska.  To the north is the Beaufort Sea and to the south is the Province of British Columbia.", "Whitehorse (25,085 people)", "35,874", "energy, diamonds and the mining of minerals, oil and gas, forestry", "Yukon Nominee Program (YNP)", "http://www.education.gov.yk.ca/ynp.html", 10),
+    new Province('Nunavut', "Our land, our strength, None of It", "/images/nunavut.jpg", "/images/background/back_nunavut.jpg", "Nunavut is the eastern-most Canadian territory. Iqaluit is the capital city. Up until, 1999 Nunavut didn't exist.  On April 1, 1999, the eastern portion of the Northwest Territories was carved out and the territory of Nunavut was born.", "Iqaluit (7,740 people)", "35,944", "mining of minerals and resource development, fishing", "NTNP Northwest Territories Nominee Program (includes Nunavut)", "http://www.immigratenwt.ca/northwest-territories-living-here", 11),
+    new Province('NWT', "Canada's Last Frontier, North of Sixty", "/images/nwt.jpg", "/images/background/back_nwt.jpg", "Northwest Territories is the central Canadian territory. Yellowknife is the capital city. Up until, 1999 the Northwest Territories were twice the size.  On April 1, 1999, it was split to recognize Nunavut as a separate territory.", "Yellowknife (19,569 people)", "41,786", "energy, diamonds and the mining of minerals, oil and gas, forestry", "NTNP Northwest Territories Nominee Program (includes Nunavut)", "http://www.immigratenwt.ca/northwest-territories-living-here", 12)
+  ]
+
+ReactDOM.render((
+    <Router>
+        <App provinces={ provinces } />
+    </Router>),
+    document.getElementById('root'));
+// registerServiceWorker();

@@ -1,0 +1,214 @@
+body{
+  font-size: 1.78vh;
+  font-family: 'Calibri', 'Trebuchet MS', sans-serif
+}
+
+p{
+  font-size: 15px;
+}
+
+hr{
+  border-color: black
+}
+
+.header{
+  background-color: #222;
+  font-family: 'Marcellus SC', serif;
+  height:70px;
+  padding: 20px;
+  font-size: 1.5em;
+  color: rgb(224, 48, 48);
+}
+
+.header a{
+  text-decoration: none;
+  color: rgb(224, 48, 48)
+}
+
+.header a:hover{
+  color: rgba(255, 208, 208, 0.925)
+}
+
+.FB{
+  position: absolute;
+  right: 13%;
+  top: 1.8%;
+}
+
+.Linked{
+  position: absolute;
+  right: 9%;
+  top: 1.8%;
+}
+
+
+.Twitter{
+  position: absolute;
+  right: 5%;
+  top: 1.8%;
+}
+
+
+.imgSocial{
+  height: 4.8vh;
+}
+
+.imgSocial:hover{
+  height: 6.8vh;
+}
+
+#navigation {
+  position:fixed;
+  width:100%;
+  bottom:0px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: rgb(224, 48, 48);
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(255, 208, 208, 0.925)
+}
+
+.item{
+  position: absolute;
+  top: 12%;
+  left:5%;
+  width: 32vw;
+  height: 40%;
+  margin: 5px;
+  border: solid rgba(255, 255, 255, 0.589) 1.5px;
+  border-radius: 15px;  
+  background-size: cover;
+  overflow: hidden;
+}
+
+.item img{
+  width: 100%;
+  height: 100%;
+  transition: all 3.0s ease-in;
+}
+
+.item:hover img{
+  transform: scale(1.35); 
+}
+
+.newsBox {
+  position: absolute;
+  top:55%;
+  left:5%;
+  width: 32vw;
+  padding: 20px;
+  margin: 5px;
+  border: rgb(255, 255, 255) 2px solid;
+  border-radius: 15px;
+  background: #C5C5C5;
+  opacity: 0.9; 
+}
+
+.provinceName{
+  position: absolute;
+  width: 50vw;
+  top:12%;
+  right:7%;
+  /* border: solid; */
+}
+
+.assessmentButton{
+  position: absolute;
+  bottom: 30%;
+  right:12%;
+  width: 40vw;
+  padding: 1px;
+  margin: 5px;
+  border-radius: 15px;
+  background-size: 100% 100%;
+}
+
+.form-group{
+  position: absolute;
+  bottom:20%;
+  right:15%;
+  width: 30vw;
+}
+
+.language-form-group{
+  position: absolute;
+  bottom:18%;
+  right:15%;
+  width: 30vw;
+}
+
+.map{
+  width: 1100px;
+  height: 642px;
+  border: none;
+}
+
+.mapText{
+  position: absolute;
+  top: 11%;
+  left: 25%;
+  font-family: 'Marcellus SC', serif;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0
+}
+
+.provinceBack{
+  width: 100%; 
+  height: 100%; 
+  position: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  left: 0px; 
+  top: 0px; 
+  z-index: -1;
+  opacity: 0.3;
+  filter: grayscale(0.5);
+}
+
+.backLink{
+  background-color: rgba(0, 0, 0, 0.192);
+  color: white;
+  padding: 4px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.final-table{
+  position: absolute;
+  top:15%;
+  right:10%;
+}
+
+td, th {
+  border: 1px solid #797979;
+  text-align: center;
+  padding: 8px;
+  width: 300px
+}
+
+tr:nth-child(even) {
+  background-color: #ebebeb;
+}
