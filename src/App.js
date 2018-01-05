@@ -15,6 +15,7 @@ class App extends Component {
           
           <a href="https://www.facebook.com/eugene.costov" target="_blank" rel="noopener noreferrer" className="FB"><img className="imgSocial" alt="boohoo" src='/fb.png' /></a>
           <a href="https://ca.linkedin.com/in/eugenecostov" target="_blank" rel="noopener noreferrer" className="Linked"><img className="imgSocial" alt="boohoo" src='/linked.png' /></a>
+          <a href="https://twitter.com/StevieEvilCat" target="_blank" rel="noopener noreferrer" className="Twitter"><img className="imgSocial" alt="boohoo" src='/twitter.png' /></a>
           </header>
       <div>
         <Route exact path="/" component={ CanadaMap } />        
