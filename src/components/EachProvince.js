@@ -197,7 +197,7 @@ class EachProvince extends Component{
         // let provincePhoto = this.props.provinces[provinceId].photo;
     // myapikey = require('./keys.js');
         let baseURL = 'https://api.cognitive.microsoft.com/bing/v7.0/news/search?q=canada+culture+' + provinceName;
-        let bingKey = '12333f4d412b417d813ceb247459af0a';
+        let bingKey = '1226f792ac724ee4aa7ae401c4ee1aee';
         let p = axios.get(baseURL, { headers: { 'Ocp-Apim-Subscription-Key' : bingKey } });
         p.then((result) => {
             let newsHeader = result.data.value;
